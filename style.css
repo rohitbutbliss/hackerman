@@ -1,0 +1,39 @@
+* {
+  font-family: monospace;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+:root {
+  --white-color-opacity-1: rgba(255, 255, 255, 1);
+  --white-color-opacity-0: rgba(255, 255, 255, 0);
+}
+
+body {
+  height: 100vh;
+  background-color: black;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.line {
+  font-weight: bolder;
+  overflow: hidden;
+  white-space: nowrap;
+  width: fit-content;
+}
+.line.active {
+  border-right: 3px solid var(--white-color-opacity-1);
+  animation: cursor-blink 1s infinite;
+}
+
+@keyframes cursor-blink {
+  from,
+  to {
+    border-color: var(--white-color-opacity-0);
+  }
+  50% {
+    border-color: var(--white-color-opacity-1);
+  }
+}
